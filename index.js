@@ -8,6 +8,12 @@ app.use(bodyParser.json());
 
 const https = require("https");
 
+app.get("/", (req, res) => {
+	res.send(
+		`Welcome, Please make use of the '/api/rates' route. Make sure to supply the needed arguements `
+	);
+});
+
 app.get("/api/rates", (req, res) => {
 	const query = {
 		base: req.query.base,
